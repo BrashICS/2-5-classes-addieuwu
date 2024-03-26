@@ -6,7 +6,7 @@
  * To create a copy of one (called an instance) we use "new"
  * See the README.md file.
  * 
- * Author:
+ * Author: Addie
  */
 
 'use strict';
@@ -29,7 +29,17 @@ class Rectangle {
   length = 1;
   width = 1;
 
-  
+  area () {
+    return this.length * this.width;
+  }
+
+  perimiter () {
+    return (this.length * 2) + (this.width * 2);
+  }
+
+  is_square () {
+    return this.length == this.width;
+  }
 }
 
 class Vehicle {
@@ -49,7 +59,7 @@ function tankGenerator() {
   tank.num_wheels = 14;
   tank.num_doors = 3;
   tank.num_seats = 4;
-  tank.fuel = "D12A1 Diesel"
+  tank.fuel = "D12A1 Diesel";
   return tank;
 }
 
