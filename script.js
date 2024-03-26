@@ -6,9 +6,61 @@
  * To create a copy of one (called an instance) we use "new"
  * See the README.md file.
  * 
- * Author:
+ * Author: Addie
  */
 
 'use strict';
 
+class Circle {
+  name = "Circle";
+  radius = 1;
 
+  area () {
+    return this.radius * Math.PI ** 2;
+  }
+
+  circumference () {
+    return 2 * this.radius * Math.PI;
+  }
+}
+
+class Rectangle {
+  name = "Rectangle";
+  length = 1;
+  width = 1;
+
+  area () {
+    return this.length * this.width;
+  }
+
+  perimiter () {
+    return (this.length * 2) + (this.width * 2);
+  }
+
+  is_square () {
+    return this.length == this.width;
+  }
+}
+
+class Vehicle {
+  type;
+  num_wheels;
+  num_doors;
+  num_seats;
+  fuel;
+  can_fly = false;
+}
+
+
+
+function tankGenerator() {
+  let tank = new Vehicle;
+  tank.type = "AFV"
+  tank.num_wheels = 14;
+  tank.num_doors = 3;
+  tank.num_seats = 4;
+  tank.fuel = "D12A1 Diesel";
+  return tank;
+}
+
+console.log(tankGenerator());
